@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link rel="stylesheet" type="text/css" href="style.css"-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .qbody {
+            text-align: left !important;
+        }
+
+
+        h1 {
+            text-align: center;
+            background-color: #b0e0e6;
+            padding: 20px;
+        }
+
+
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ccc;
+        }
+
+        .container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-box-left {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+            
+        }
+
+        .form-box-right {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: 100%;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Group 1's Database Project</h1>
+    <h2>Our Project</h2>
+    <h3>Our goal with this project was to create a database to store goat data and display the weights of goats over
+        there life span.<br>We also will do some calculations on the weights to help provide a prediction for how the
+        goats should grow overtime.<br>We also created some tables to show how certain traits can correlate to weights.
+    </h3>
+    <h2>The Tables</h2>
+    <h3>Please click on any of the options below to view them</h3>
+    <div class="container">
+        <div class="form-box-left">
+            <p>Display the pregnant Dams that have previously had a
+                baby goat over 10lbs </p>
+            <form action="/query_1" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the dams and the number of baby goats they've grafted </p>
+            <form action="/query_2" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the parents of goats who’s BWT was greater than 5 </p>
+            <form action="/query_3" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the Dams of the goats who's BWT was greater than 5 </p>
+            <form action="/query_4" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the Sires of the goats who's BWT was greater than 5 </p>
+            <form action="/query_5" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the Dams of the goats who's BWT was greater than 8 </p>
+            <form action="/query_6" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <p>Display the Sires of the goats who's BWT was greater than 8 </p>
+            <form action="/query_7" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+        </div>
+        <div class="form-box-right">
+            <p>Stake Holder Topic: AVG Seasonal Weights</p>
+            <form action="/query_8" method="POST">
+                <input type="submit" value="Run Query">
+            </form>
+            <div class="grid-container" id="gridContainer"></div>
+            <script src="script.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
